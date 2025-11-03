@@ -4,6 +4,13 @@ A Rust implementation of Python’s `math` library — **bit-for-bit compatible*
 
 ---
 
+Challenge:
+Create a number crunching (Math tools, statistics, algorithms) project with the professional builder (500 lines max) limit while following the one-loop warrior constraint.
+
+![challenge](/challenge.png)
+
+---
+
 ## 🧩 Overview
 
 `pymath` is a direct, line-by-line port of CPython’s `math` module from C to Rust.
