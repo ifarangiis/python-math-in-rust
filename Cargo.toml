@@ -1,0 +1,23 @@
+[package]
+name = "pymath"
+version = "0.0.2"
+edition = "2024"
+description = "A binary representation compatible Rust implementation of Python's math library."
+license = "PSF-2.0"
+
+
+[features]
+# Do not enable this feature unless you really need it.
+# CPython didn't intend to use FMA for its math library.
+# This project uses this feature in CI to verify the code doesn't have additional bugs on aarch64-apple-darwin.
+# However, this does not mean that using this feature is better or more correct on that platform.
+# Note that the quality of the results has been well-tested without FMA but has not been tested with FMA.
+# See also: https://github.com/python/cpython/issues/132763
+mul_add = []
+
+[dependencies]
+libc = "0.2"
+
+[dev-dependencies]
+proptest = "1.6.0"
+pyo3 = { version = "0.24", features = ["abi3"] }
